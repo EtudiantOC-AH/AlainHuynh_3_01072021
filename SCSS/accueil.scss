@@ -38,17 +38,10 @@ header img {
         p {
             font-size: 1.1em;
     }
-            button {
-                border-radius: 30px;
-                line-height: 3;
-                padding: 0 6%;
-                margin: 4% 0 8%;
-                font-size: 1em;
-                border: none;
-                background-color: $violet;
-                color: white;
-            }
 }
+button {
+    @include bouton-gen;   
+            }
 .fonctionnements {
     h2 {
     margin-left: 6%;
@@ -57,7 +50,7 @@ header img {
         span {
             padding: 0 1.3%;
             color: white;
-            border: 1px solid $violet;
+            border: 1px solid transparent;
             background-color: $violet;
             border-radius: 50%;
             margin: 0 7%;
