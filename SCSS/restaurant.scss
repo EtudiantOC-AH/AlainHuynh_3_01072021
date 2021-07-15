@@ -48,11 +48,26 @@ img[src*="images/restaurants/"] {
 }
 .menu-card {
     background-color: white;
-    border-radius: 1.5em;
+    border-radius: 1em;
     box-shadow: 0 0 10px #d6d6d6;
     width: 85%;
-    padding: 0.6em;
+    padding: 0.1em 0.6em 0.6em;
     margin: 0 0 20px 19px;
+    line-height: 0.8em;
+        :first-child {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+            :nth-child(2) {
+                font-size: 0.9em;
+                line-height: 0.1em;
+            }
+                :nth-child(3) {
+                    font-weight: bold;
+                    position: absolute;
+                    margin-left: 75%;
+                    margin-top: -1.4em;
+                }
 }
 @import "mixin";
 button {
