@@ -13,6 +13,9 @@
     margin: 4% 0 8%;
     font-size: 1em;
     border: none;
-    background-color: $violet;
     color: white;
+}
+
+@mixin degrade {
+    background: linear-gradient(#FF79DA,#9356DC);
 }
