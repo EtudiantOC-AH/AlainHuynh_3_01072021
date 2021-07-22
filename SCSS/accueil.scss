@@ -52,6 +52,7 @@ header h1 {
 }
 button {
     @include bouton-gen;
+    @include degrade;
 }
 .fonctionnements {
     display: flex;
