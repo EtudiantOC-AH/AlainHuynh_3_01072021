@@ -1,18 +1,29 @@
+@keyframes progress-bar {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+.loading-spinner {
+    display: none;
+}
 html {
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 body {
     margin: 0;
     padding: 0;
-    font-family: "roboto", sans-serif; 
+    font-family: "roboto", sans-serif;
 }
 @import "mixin";
-header img {
+header h1 {
     @include header-logo;
 }
 .localisation {
     background-color: #eeeded;
-    padding: 4% 0 4% 10%;
+    padding: 15px 15px 15px 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,54 +32,57 @@ header img {
         border: 0;
         background-color: transparent;
         font-size: 1.1em;
-        padding-left: 5%;     
+        padding-left: 15px;
     }
 }
 @import "variable";
 .presentation {
     background-color: $light-gray;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
     h1 {
         font-size: 1.6em;
         width: 70%;
         margin: 6% auto 3%;
     }
-        p {
-            font-size: 1.1em;
+    p {
+        font-size: 1.1em;
     }
 }
 button {
-    @include bouton-gen;   
-            }
+    @include bouton-gen;
+}
 .fonctionnements {
+    display: flex;
+    flex-direction: column;
     h2 {
-    margin-left: 6%;
-    margin-top: 12%;
+        margin-left: 25px;
+        margin-top: 40px;
     }
-        span {
-            padding: 0 1.3%;
-            color: white;
-            border: 1px solid transparent;
-            background-color: $violet;
-            border-radius: 50%;
-            margin: 0 7%;
-        }
-            p {
-                margin-left: 10%;
-                font-weight: 500;
-            }
-                i {
-                    color: gray;
-                    font-size: 1.4em;
-                }
+    span {
+        padding: 3px 8px 3px 8px;
+        color: white;
+        border: 1px solid transparent;
+        background-color: $violet;
+        border-radius: 25px;
+        margin: 0 25px;
+        position: absolute;
+    }
+    p {
+        margin-left: 30px;
+        font-weight: 500;
+    }
+    i {
+        color: gray;
+        font-size: 1.4em;
+    }
 }
 .fonction-list {
     display: flex;
     align-items: center;
-    margin-bottom: 6%;
-    margin-top: 8%;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 .fonction-card {
     display: flex;
@@ -76,13 +90,15 @@ button {
     background-color: $light-gray;
     border-radius: 1.5em;
     box-shadow: 0 0 10px #d6d6d6;
-    margin-right: 6%;
+    margin-right: 25px;
     width: 100%;
     padding: 0.6em;
+    margin-left: 40px;
+    padding-left: 35px;
 }
 .restaurants {
-    margin-top: 12%;
-    padding: 6%;
+    margin-top: 40px;
+    padding: 18px;
     background-color: $light-gray;
     img {
         object-fit: cover;
@@ -90,31 +106,30 @@ button {
         height: 180px;
         border-radius: 20px 20px 0 0;
     }
-        span {
-            position: absolute;
-            border-radius: 3px;
-            background-color: #99e2d0;
-            text-align: center;
-            color: #008766;
-            margin-left: 64%;
-            margin-top: 3%;
-            font-size: 0.9em;
-            padding: 5px 12px;
-            width: 15%;
-            font-weight: 500;
-        }
-            a {
-                color: black;
-                text-decoration: none;
-            }
-                i {
-                    font-size: 1.5em;
-                }
-                    .card {
-                        border-radius: 20px;
-                        background-color: white;
-                        margin-bottom: 20px;
-                    }
+    span {
+        position: absolute;
+        border-radius: 3px;
+        background-color: #99e2d0;
+        text-align: center;
+        color: #008766;
+        right: 30px;
+        margin-top: 10px;
+        font-size: 0.9em;
+        padding: 1% 3%;
+        font-weight: 500;
+    }
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    i {
+        font-size: 1.5em;
+    }
+    .card {
+        border-radius: 20px;
+        background-color: white;
+        margin-bottom: 20px;
+    }
 }
 .text {
     margin-top: -10px;
@@ -123,16 +138,16 @@ button {
         padding-left: 15px;
         font-weight: 500;
     }
-        p {
-            padding-left: 15px;
-            padding-bottom: 20px;
-            line-height: 0.1em;
-        }
-            i {
-                position: absolute;
-                margin-left: 75%;
-                margin-top: -3em;
-            }
+    p {
+        padding-left: 15px;
+        padding-bottom: 20px;
+        line-height: 0.1em;
+    }
+    i {
+        position: absolute;
+        right: 40px;
+        margin-top: -3em;
+    }
 }
 footer {
     background-color: #383434;
@@ -143,21 +158,55 @@ footer {
         font-size: 1.2em;
         padding-left: 15px;
     }
-        ul {
-            list-style-type: none;
-            padding-left: 15px;
+    ul {
+        list-style-type: none;
+        padding-left: 15px;
+    }
+    li {
+        padding-bottom: 5px;
+    }
+    .fa-utensils {
+        padding-right: 17px;
+    }
+    .fa-hands-helping {
+        padding-right: 10px;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+@media screen and (min-width: 768px) {
+    .fonction-row {
+        display: flex;
+        justify-content: space-around;
+    }
+    .resto-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .card {
+        width: 45%;
+    }
+    .restaurants span {
+        right: inherit;
+        margin-left: -115px;
+        padding: 10px 23px;
+    }
+    .restaurants .card {
+        margin-bottom: 40px;
+    }
+    .text {
+        margin-top: inherit;
+        i {
+            right: inherit;
+            margin-left: 38%;
         }
-            li {
-                padding-bottom: 5px;
-            }
-                .fa-utensils { 
-                    padding-right: 17px;
-                }
-                .fa-hands-helping {
-                    padding-right: 10px;
-                }
-                a {
-                    text-decoration: none;
-                    color: white;
-                }
+    }
+    footer ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
 }
