@@ -83,7 +83,10 @@ img[src*="images/restaurants/"] {
 @import "mixin";
 button {
     @include bouton-gen;
-    margin-left: 25%;
+}
+.btn {
+    display: flex;
+    justify-content: center;
 }
 footer {
     background-color: #383434;
