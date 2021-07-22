@@ -83,6 +83,7 @@ img[src*="images/restaurants/"] {
 @import "mixin";
 button {
     @include bouton-gen;
+    @include degrade;
 }
 .btn {
     display: flex;
