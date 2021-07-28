@@ -1,24 +1,47 @@
 @import "variable";
 @import "mixin";
 @import "global";
-@keyframes circle-points {
-    from {
-        transform: scaleX(0);
+@keyframes fond {
+    0% {
+        opacity: 0;
     }
-    to {
-        transform: scaleX(1);
+    100% {
+        opacity: 0;
+        display: none;
     }
 }
-@keyframes circle-loading {
+@keyframes spin {
     0% {
         transform: rotate(0deg);
     }
+    85% {
+        opacity: 1;
+    }
     100% {
         transform: rotate(360deg);
+        opacity: 0;
+        display: none;
     }
 }
-.loading-spinner {
-    display: none;
+.spinner {
+    border: 15px solid transparent;
+    border-color: #ff79da #9356dc;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: auto;
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: spin 3s linear 1;
+    animation-fill-mode: forwards;
+}
+.loading-page {
+    opacity: 1;
+    animation: fond 3s;
 }
 html {
     box-sizing: border-box;
@@ -164,7 +187,7 @@ button:hover {
         margin: 0;
     }
 }
-.far {
+.text .far {
     position: absolute;
     right: 30px;
     bottom: 30px;
@@ -173,9 +196,9 @@ button:hover {
     transition: opacity 500ms;
     &:hover {
         opacity: 0;
-        }
+    }
 }
-.fas {
+.text .fas {
     position: absolute;
     right: 30px;
     bottom: 30px;
@@ -184,7 +207,6 @@ button:hover {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    width: 100%;
     opacity: 0;
     transition: opacity 1000ms;
     &:hover {
@@ -242,13 +264,5 @@ footer {
     }
     .text {
         margin-top: inherit;
-    }
-    i {
-        right: inherit;
-        left: 90%;
-    }
-    footer ul {
-        display: flex;
-        justify-content: space-evenly;
     }
 }
