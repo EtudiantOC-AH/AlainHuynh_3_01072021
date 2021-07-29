@@ -21,7 +21,7 @@ body {
 }
 header {
     position: relative;
-    h1 {
+    p {
         @include header-logo;
     }
 }
@@ -50,20 +50,15 @@ img[src*="images/restaurants/"] {
     padding-bottom: 20px;
     h2 {
         font-family: "Shrikhand", sans-serif;
-        padding: 30px 0 0 20px;
+        padding-top: 30px;
         font-size: 1.6em;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 70%;
-    }
-    i {
-        padding-right: 40px;
     }
     h3 {
         text-transform: uppercase;
         font-weight: 500;
-        margin-left: 20px;
         margin-top: 2em;
         &::after {
             content: "";
@@ -74,34 +69,12 @@ img[src*="images/restaurants/"] {
         }
     }
 }
-.menu .far {
-    position: absolute;
-    right: 1px;
-    opacity: 1;
-    transition: opacity 500ms;
-    &:hover {
-        opacity: 0;
-    }
-}
-.menu .fas {
-    position: absolute;
-    right: 1px;
-    background: linear-gradient(#ff79da, #9356dc);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    opacity: 0;
-    transition: opacity 1000ms;
-    &:hover {
-        opacity: 1;
-    }
-}
 .menu-card {
     background-color: white;
     border-radius: 1em;
     box-shadow: 0 0 10px #d6d6d6;
     padding: 0.1em 0.6em 0.4em;
-    margin: 0 20px 20px;
+    margin: 20px 0;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -111,6 +84,7 @@ img[src*="images/restaurants/"] {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        margin-bottom: 0;
     }
     :nth-child(2) {
         font-size: 0.9em;
@@ -118,6 +92,7 @@ img[src*="images/restaurants/"] {
         white-space: nowrap;
         text-overflow: ellipsis;
         width: 82%;
+        margin-top: 5px;
     }
     :nth-child(3) {
         font-weight: bold;
@@ -186,7 +161,7 @@ footer {
 @media screen and (min-width: 768px) {
     .container {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
     .flex1,

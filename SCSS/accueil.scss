@@ -51,7 +51,7 @@ body {
     padding: 0;
     font-family: "roboto", sans-serif;
 }
-header h1 {
+header p {
     @include header-logo;
 }
 .localisation {
@@ -96,15 +96,16 @@ button:hover {
     flex-direction: column;
     h2 {
         margin-top: 40px;
-        padding-left: 20px;
     }
     span {
-        padding: 3px 8px 3px 8px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
         color: white;
         border: 1px solid transparent;
         background-color: $violet;
         border-radius: 25px;
-        margin: 0 25px;
+        text-align: center;;
         position: absolute;
     }
     p {
@@ -128,12 +129,9 @@ button:hover {
     background-color: $light-gray;
     border-radius: 1.5em;
     box-shadow: 0 0 10px #d6d6d6;
-    margin-right: 25px;
     width: 100%;
-    padding: 0.6em;
-    margin-left: 40px;
-    padding-left: 35px;
-    height: 51px;
+    margin-left: 12px;
+    padding: 5px 20px 5px 40px;
     cursor: pointer;
     &:hover {
         box-shadow: 0 1px 5px 5px #c6c6c6;
@@ -142,7 +140,7 @@ button:hover {
 }
 .restaurants {
     margin-top: 40px;
-    padding: 18px;
+    padding: 18px 0;
     background-color: $light-gray;
     img {
         object-fit: cover;
@@ -196,6 +194,7 @@ button:hover {
     transition: opacity 500ms;
     &:hover {
         opacity: 0;
+        display: none;
     }
 }
 .text .fas {
@@ -241,18 +240,21 @@ footer {
     }
 }
 @media screen and (min-width: 768px) {
+    .fonction-list {
+    width: 30%;
+    }
     .fonction-row {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .resto-row {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .card {
-        width: 45%;
+        width: 48%;
     }
     .restaurants span {
         right: inherit;
