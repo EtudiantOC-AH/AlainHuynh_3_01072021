@@ -190,27 +190,6 @@ button:hover {
     right: 30px;
     bottom: 30px;
     font-size: 1.8em;
-    opacity: 1;
-    transition: opacity 500ms;
-    &:hover {
-        opacity: 0;
-        display: none;
-    }
-}
-.text .fas {
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
-    font-size: 1.8em;
-    background: linear-gradient(#ff79da, #9356dc);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    opacity: 0;
-    transition: opacity 1000ms;
-    &:hover {
-        opacity: 1;
-    }
 }
 footer {
     background-color: #383434;
