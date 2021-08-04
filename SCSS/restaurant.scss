@@ -14,9 +14,11 @@
 @keyframes rotation {
     0% {
         transform: rotate(0deg);
+        opacity: 0;
     }
     100% {
         transform: rotate(360deg);
+        opacity: 1;
     }
 }
 html {
@@ -74,7 +76,7 @@ img[src*="images/restaurants/"] {
             display: block;
             width: 48px;
             height: 3px;
-            background-color: #99e2d0;
+            background-color: $green;
         }
     }
 }
@@ -91,10 +93,14 @@ img[src*="images/restaurants/"] {
     align-items: center;
     justify-content: center;
     font-size: 1.7em;
+    opacity: 1;
     animation: rotation 0.5s ease-in-out;
 }
+.menu-card::after {
+    opacity: 0;
+}
 .menu-card:hover {
-    border-right: 80px solid aquamarine;
+    border-right: 80px solid $green;
 }
 .menu-card {
     background-color: white;
@@ -105,7 +111,7 @@ img[src*="images/restaurants/"] {
     white-space: nowrap;
     text-overflow: ellipsis;
     position: relative;
-    border-right: 0px solid aquamarine;
+    border-right: 0px solid $green;
     transition: all 0.3s ease-out;
     :first-child {
         font-size: 1.1em;
