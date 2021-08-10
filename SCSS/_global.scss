@@ -5,7 +5,7 @@
 }
 .far.fa-heart {
     &:hover {
-        background: linear-gradient(#ff79da, #9356dc);
+        background: linear-gradient($pink, $violet);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
